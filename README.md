@@ -1,5 +1,6 @@
 # Day-of-Year-Finder
 super simple first project for COP 2228
+
 Still learning how to use github.
 This project isn't anything special, but it was our first project to utilize operator overloading.
 
