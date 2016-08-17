@@ -8,7 +8,7 @@ DayOfYear DayOfYear::operator++()
 
 	if (dayOfTheYear == 366)
 		dayOfTheYear = 1;
-
+	setMonth();
 	return DayOfYear(dayOfTheYear);
 }
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ DayOfYear DayOfYear::operator++(int)
 
 	if (dayOfTheYear == 366)
 		dayOfTheYear = 1;
-
+	setMonth();
 	return temp;
 }
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ DayOfYear DayOfYear::operator--()
 
 	if (dayOfTheYear == 0)
 		dayOfTheYear = 365;
-
+	setMonth();
 	return DayOfYear(dayOfTheYear);
 }
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ DayOfYear DayOfYear::operator--(int)
 
 	if (dayOfTheYear == 0)
 		dayOfTheYear = 365;
-
+	setMonth();
 	return temp;
 }
 //-------------------------------------------------------------------------------------------------------------------------------
