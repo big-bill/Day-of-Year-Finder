@@ -6,7 +6,9 @@ This project isn't anything special, but it was our first project to utilize ope
 
 
 Project 1 Description:
+
 Project 1 is programming challenges 2 & 3 for chapter 11
+
 Challenge 2: 
 Assuming that a year has 365 days, write a class named DayOfYear that takes an integer representing a day of the year
 and translate it to a string consisting of the month followed by day of the month. For example:
