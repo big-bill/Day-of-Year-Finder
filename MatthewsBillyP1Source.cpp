@@ -95,14 +95,12 @@ int main()
 		dayChosen.print();
 
 		dayChosen++;
-		dayChosen.setMonth();
 		std::cout << "\nThe next day: ";
 		dayChosen.print();
 
 		//To get the previous date, we must decrement twice
 		dayChosen--;
 		--dayChosen;
-		dayChosen.setMonth();
 		std::cout << "\nThe previous day: ";
 		dayChosen.print();
 
