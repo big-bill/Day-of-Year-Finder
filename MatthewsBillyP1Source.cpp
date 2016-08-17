@@ -75,13 +75,15 @@ int main()
 			std::stringstream myStream(input);
 			if (myStream >> day && (day >= 1 && day <= 365))
 				break;
+			clearScreen();
 			std::cout << "\nInvalid choice, please try again.\n\n";
 		}
 
 		// Example of utilizing the second constructor that has two parameters (int day and string month)
 		// The specifications didn't ask for the second constructor to be utilized, only added onto the class.
 		/*
-			DayOfYear dayKnown(5, cuck);
+			std::string testMonth = "May"
+			DayOfYear dayKnown(5, testMonth);
 			dayKnown.print();
 			std::getline(std::cin, temp);
 			DayOfYear dayError(32, "May"); // Program exits because of an invalid date
@@ -97,7 +99,7 @@ int main()
 		std::cout << "\nThe next day: ";
 		dayChosen.print();
 
-		//We decrement twice, because we just incremented the original date
+		//To get the previous date, we must decrement twice
 		dayChosen--;
 		--dayChosen;
 		dayChosen.setMonth();
