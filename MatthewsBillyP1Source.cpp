@@ -39,7 +39,6 @@ Updated in August 2016, made some improvements to make it github-ready and whatn
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <algorithm>
 #include "DayOfYear.h"
 
 void splashScreen(); //greets the user and explains the program
@@ -51,8 +50,8 @@ std::string DayOfYear::month = "";  //static string variable for the DayOfYear c
 int main()
 {
 	//declaration and initialization of variables
-	int day = 0, dayOfTheMonth = 0, testDate = 0;
-	std::string temp = "", chosenMonth = "", input = "";
+	int day = 0;
+	std::string temp = "";
 	char repeat = '\0';
 
 	//greets the user and explains the program
@@ -69,10 +68,10 @@ int main()
 					  << "Enter a day of the year (1-365) to find what month and day it is.\n"
 					  << "Day: ";
 
-			std::getline(std::cin, input);
+			std::getline(std::cin, temp);
 
 			//validates that the user entered a numeric value between 1-2
-			std::stringstream myStream(input);
+			std::stringstream myStream(temp);
 			if (myStream >> day && (day >= 1 && day <= 365))
 				break;
 			clearScreen();
@@ -117,6 +116,7 @@ int main()
 				if (repeat == 'Y' || repeat == 'N')
 					break;
 			}
+			clearScreen();
 			std::cout << "\nInvalid entry, please try again." << std::endl;
 		}
 
